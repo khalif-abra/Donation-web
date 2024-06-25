@@ -1,0 +1,579 @@
+/* CSS code */
+
+/* Placeholder styling */
+
+/* Navbar styling */
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 40px; /* Sesuaikan nilai ini untuk mengatur posisi horizontal */
+    transition: all 0.6s ease; /* Efek transisi untuk semua properti */
+    animation: fadeInDown 0.6s ease; /* Efek animasi */
+    gap: 15px;
+}
+
+.navbar-brand {
+    color: #fff;
+    transition: color 0.3s;
+}
+.navbar-brand.scrolled {
+    color: #333A73;
+}
+
+.navbar-nav:hover {
+    color: rgb(184, 139, 84);
+}
+
+.carousel-item video {
+    max-height: 500px;
+    /* Adjust the height to fit your needs */
+    object-fit: cover;
+    /* Ensure the video covers the area */
+}
+
+.carousel-item img {
+    max-height: 500px;
+    /* Adjust the height to fit your needs */
+    object-fit: cover;
+    /* Ensure the video covers the area */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.navbar-light {
+    background-color: transparent !important; /* Set navbar background to transparent */
+    transition: background-color 0.3s ease-out; /* Add transition effect */
+}
+
+.navbar-scrolled {
+    background-color: #F6F5F2!important; /* Change background color when scrolled */
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.carousel-item video {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+h5 {
+    font-size: 2em;
+    /* Adjust the font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 123, 255, 0.228),
+        0 6px 20px 0 rgba(41, 134, 234, 0.187);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Custom CSS for smaller and tidy text */
+.card-title {
+    font-size: 1.25rem;
+    text-align: center;
+    text-shadow: none;
+}
+
+.card-text {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.btn {
+    font-size: 0.875rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+/* Sub-title styling */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgb(107, 176, 232), #add8e6);
+    z-index: -1;
+    transform: skewY(-5deg);
+}
+
+.category-container {
+    margin-bottom: 4rem; /* Mengatur margin untuk kontainer kategori */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+}
+
+.section-title-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    color: inherit;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-decoration: none; /* Menghilangkan garis bawah */
+    margin-bottom: 1rem; /* Jarak bawah teks untuk memberi ruang bagi garis */
+}
+
+.section-title-title::before {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Mengatur jarak di bawah teks */
+    left: 50%;
+    transform: translateX(-50%) skewY(-5deg); /* Menempatkan garis di tengah */
+    width: 80%; /* Lebar garis */
+    height: 5px; /* Tinggi garis */
+    background: linear-gradient(to right, rgb(107, 176, 232), #add8e6);
+    z-index: -1;
+}
+
+.section-title-title.no-hover:hover {
+    color: inherit; /* Warna tetap saat di-hover */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Tetap mempertahankan shadow saat di-hover */
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transisi untuk border-color dan box-shadow */
+    color: #000; /* Warna teks default */
+    width: 100%;
+    max-width: 1200px; /* Lebar maksimum input */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style saat input tidak kosong */
+.form-control:not(:placeholder-shown) {
+    color: #6d7175; /* Warna teks saat input tidak kosong */
+}
+
+/* Style saat input mendapat fokus */
+.form-control:focus {
+    background-color: transparent;
+    border-color: #ccc; /* Warna border saat focus */
+    box-shadow: none; /* Efek bayangan saat focus */
+    animation: bounce 1s ease;
+}
+
+/* Animasi untuk input */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Media queries untuk responsivitas */
+@media (max-width: 768px) {
+    .form-control {
+        max-width: 100%; /* Input mengambil lebar maksimum pada layar kecil */
+    }
+}
+
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover {
+    color: #CAF4FF !important;
+}
+
+.nav-link.active {
+    color: #A0DEFF !important;
+}
+
+.nav-link {
+    color: #31363F;
+}
+
+.card-container {
+    display: grid; /* Menggunakan CSS grid */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    ); /* Membuat kolom responsif */
+    gap: 30px; /* Jarak antar card */
+}
+
+.card {
+    height: 100%; /* Membuat card memenuhi tinggi container */
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Mengatur item card secara vertikal */
+}
+
+.card-body {
+    flex-grow: 1; /* Membuat card body mengisi ruang yang tersedia */
+}
+
+/* Mengatur warna icon pada card */
+.card-body i {
+    color: #009688; /* Warna teal */
+    font-size: 2rem; /* Memperbesar ukuran ikon */
+}
+
+.donate-save {
+    margin-top: 70px; /* Sesuaikan nilai margin-bottom sesuai kebutuhan Anda */
+    animation: bottom 0.6s ease; /* Efek animasi */
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #10aee3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.icon-circle i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(233px, 1fr));
+    gap: 30px;
+    justify-content: center; /* Mengatur card berada di tengah horizontal */
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.custom-card {
+    width: 100%;
+    max-width: 233px;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto; /* Menengahkan card */
+}
+
+.custom-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    font-size: 2rem; /* Ubah ukuran ikon sesuai kebutuhan */
+    color: black; /* Ubah warna ikon sesuai kebutuhan */
+    background-color: transparent; /* Hapus latar belakang atau sesuaikan sesuai desain Anda */
+    border: none; /* Hapus border jika tidak diperlukan */
+    top: 50%; /* Posisi vertical tengah */
+    transform: translateY(-50%); /* Geser ke atas setengah dari tinggi tombol */
+    opacity: 0.5; /* Opacity awal */
+    transition: opacity 0.3s ease; /* Transisi opacity */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Tingkatkan opacity saat dihover */
+}
+
+
+@media (max-width: 991px) {
+    .custom-card {
+        margin-bottom: 15px; /* Tambahkan margin bawah agar tidak terlalu rapat */
+    }
+
+    .row {
+        justify-content: center; /* Pusatkan baris card */
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-items {
+    flex: 0 0 calc(33.33% - 30px);
+    box-sizing: border-box;
+}
+
+.card-item {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-item img {
+    width: 100%; /* Gambar mengisi lebar kartu */
+    height: auto; /* Tinggi gambar menyesuaikan proporsinya */
+    object-fit: cover; /* Memastikan gambar tetap di dalam kotak tanpa mengubah proporsinya */
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #10aee3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.icon-circle i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.card img {
+    border-radius: 15px;
+}
+
+.card-title {
+    margin-top: 15px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.card-long {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card-long img {
+    width: 100%;
+    height: auto;
+}
+
+.card-long .card-body {
+    text-align: center;
+}
+
+.custom-card {
+    width: 233px;
+    height: 322px;
+    border-radius: 20px
+}
+
+.custom-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This will make the image cover the entire card */
+}
+
+.card-img-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+/* .card {
+    border-radius: 0.5rem;
+} */
+
+.btn-animate {
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    width: auto;
+    /* Menjadikan lebar tombol otomatis sesuai teks */
+}
+
+.btn-animate:hover {
+    transform: scale(1.05);
+    background-color: #ff6347;
+    /* Warna baru saat hover */
+    color: white;
+    /* Warna teks baru saat hover */
+}
+
+.btn-xs {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    width: 100px;
+    /* Lebar tombol khusus */
+}
+
+.text-item {
+    color: #A0DEFF;
+}
+
+.background-item {
+    width: 95%;
+    height: 390px;
+    background-color: #8f0000;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Menempatkan elemen ke kanan dan kiri */
+}
+
+.text-hello {
+    text-align: left;
+    margin-left: 50px;
+    color: #fff;
+}
+
+.text-hello button {
+    margin-top: -30px;
+    display: inline-block;
+    float: none; /* Pastikan untuk menyetel float ke none agar tidak terpengaruh */
+}
+
+
+.text-hello p {
+    color: #b3a8a8; /* Mengubah warna teks p menjadi abu-abu */
+    margin-bottom: 40px; /* Menambah jarak antara paragraf dan elemen sebelumnya */
+}
+
+
+
+
+.img-container img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-right: 70px;
+}
+
+.img-container {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-right: 120px;
+    background-color: #10aee3
+}
+
+
+
+/* Untuk layar dengan lebar kurang dari atau sama dengan 768px */
+@media (max-width: 768px) {
+    .card-items {
+        flex-basis: calc(50% - 30px); /* Setiap item mengambil 50% lebar dengan margin */
+    }
+}
+
+/* Untuk layar dengan lebar kurang dari atau sama dengan 480px */
+@media (max-width: 480px) {
+    .card-items {
+        flex-basis: calc(100% - 30px); /* Setiap item mengambil 100% lebar dengan margin */
+    }
+}
+
+
+
+
+/* Membuat kartu responsif */
+@media (max-width: 768px) {
+    .card-item {
+        width: 90%; /* Ubah lebar menjadi 90% dari lebar layar pada layar yang lebih kecil */
+        margin: 20px auto; /* Pusatkan kartu secara horizontal */
+    }
+}
+
+/* Animasi untuk muncul dari atas */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi untuk muncul dari kanan */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animasi untuk muncul dari bawah */
+@keyframes bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 10px;
+        text-align: center; /* Sesuaikan nilai ini sesuai kebutuhan */
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-toggler {
+        font-size: 15px; /* Sesuaikan nilai ini sesuai kebutuhan */
+    }
+}
