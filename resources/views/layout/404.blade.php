@@ -19,6 +19,7 @@
         @include('partials.404')
 
             @yield('404')
+            
 
 
         <!--=============== SCROLLREVEAL ===============-->
